@@ -1,9 +1,14 @@
 'use strict';
-function makeTransaction(quantity, pricePerDroid) {
-    const totalPrice = quantity * pricePerDroid;
-    return `"You ordered ${quantity} droids worth ${totalPrice} credits!"`;
-}
-console.log(makeTransaction(5, 3000)); // "You ordered 5 droids worth 15000 credits!"
-console.log(makeTransaction(3, 1000)); // "You ordered 3 droids worth 3000 credits!"
-console.log(makeTransaction(10, 500)); // "You ordered 10 droids worth 5000 credits!"
+const commonLiInUl = document.querySelectorAll('.item');
+let namberLi = commonLiInUl.length;
+let string1 = `Namber of categories: ${namberLi}`;
+console.log(string1);
 
+commonLiInUl.forEach(item => {
+  const titleInUl = item.querySelector('h2').textContent;
+  const liCount = item.querySelectorAll('ul li').length;
+  let string2 = `Category: ${titleInUl}`;
+  let string3 = `Elements: ${liCount}`;
+  console.log(string2);
+  console.log(string3);
+});
