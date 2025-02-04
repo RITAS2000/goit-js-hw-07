@@ -9,12 +9,14 @@ formUse.addEventListener('submit', event => {
   }
   const objValue = {};
   for (let element of event.target.elements) {
-    if (element.type !== 'submit') {
+    if (element.type !== 'submit' && element.value.trim() !== '') {
       objValue[element.name] = element.value.trim();
     }
   }
-  console.log(objValue);
-  formUse.reset();
+  if (Object.keys(objValue).length > 0) {
+    console.log(objValue);
+    formUse.reset();
+  }
 });
 // розбіжності з макетом и ТЗ в конспекті)
 const buttonUse = document.querySelector('.login-form button');

@@ -28,15 +28,16 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
-images.forEach(imeg => {
+const elements = images.map(image => {
   const createLi = document.createElement('li');
   createLi.style.maxWidth = '360px';
   createLi.style.height = '300px';
   createLi.style.overflow = 'hidden';
   const createImg = document.createElement('img');
-  createImg.src = imeg.url;
-  createImg.alt = imeg.alt;
+  createImg.src = image.url;
+  createImg.alt = image.alt;
   createImg.style.height = '100%';
   createLi.appendChild(createImg);
-  gallery.appendChild(createLi);
+  return createLi;
 });
+gallery.append(...elements);

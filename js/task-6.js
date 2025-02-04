@@ -10,9 +10,9 @@ const buttonDestroy = document.querySelector('button[data-destroy]');
 const divBoxes = document.querySelector('#boxes');
 
 input.addEventListener('input', event => {
-  if (inputValue < 0) {
+  if (input.value < 0) {
     event.target.value = 0;
-  } else if (inputValue > 100) {
+  } else if (input.value > 100) {
     event.target.value = 100;
   }
 });
