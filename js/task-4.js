@@ -21,3 +21,17 @@ formUse.addEventListener('submit', event => {
 // розбіжності з макетом и ТЗ в конспекті)
 const buttonUse = document.querySelector('.login-form button');
 buttonUse.textContent = 'Log in';
+
+// const inputEl = document.querySelector('input');
+// const targetKey = 'a'; // змінюй на потрібну клавішу
+// let keyPressCount = 0;
+
+// document.addEventListener('keydown', event => {
+//   if (event.key === targetKey) {
+//     keyPressCount++;
+
+//     if (keyPressCount === 7) {
+//       inputEl.style.color = 'red'; // змінюємо колір тексту
+//     }
+//   }
+// });
